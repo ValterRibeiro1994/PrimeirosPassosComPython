@@ -20,9 +20,10 @@ def obter_usuarios():
         # A resposta é um JSON, vamos convertê-la para um objeto Python (lista de dicionários)
         usuarios = resposta.json()
     
-        # Iterando sobre os usuários e exibindo o nome e o e-mail
+        # Iterando sobre os usuários e exibindo os detalhes basicos
         for usuario in usuarios:
-            print(f"Nome: {usuario['name']}, E-mail: {usuario['email']}")
+
+            print(f"ID: {usuario['id']}\nNome: {usuario['name']}, \nE-mail: {usuario['email']}, \nTelefone: {usuario['phone']}, \nEndereço: {usuario['address']['city']}\n")
 
 # Chamando a função
 obter_usuarios()
